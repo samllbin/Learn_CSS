@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/nav.css" />
+  </head>
+  <body>
+    <div>
+      <div class="tab-navbar">
+        <nav>
+          <label class="active">标题1</label>
+          <label>标题2</label>
+          <label>标题3</label>
+          <label>标题4</label>
+        </nav>
+        <main>
+          <ul style="--tab-count: 4">
+            <li style="--bg-color: #f66">内容1</li>
+            <li style="--bg-color: #66f">内容2</li>
+            <li style="--bg-color: #f90">内容3</li>
+            <li style="--bg-color: #09f">内容4</li>
+          </ul>
+        </main>
+      </div>
+    </div>
+    <script>
+      const navs = document.querySelectorAll(".tab-navbar nav label");
+      const tabs = document.querySelector(".tab-navbar main ul");
+
+      navs.forEach((v, i) =>
+        v.addEventListener("click", (e) => {
+          navs.forEach((v) =>
+            v.classList[v === e.target ? "add" : "remove"]("active")
+          );
+          tabs.style.setProperty("--tab-index", i);
+        })
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/wzlogin.css" />
+  </head>
+  <body>
+    <form class="bubble-distribution">
+      <h3>注册</h3>
+      <div class="accout">
+        <input
+          type="text"
+          placeholder="请输入手机或邮箱"
+          pattern="^1[3456789]\d{9}$|^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$"
+          required
+        />
+        <img
+          src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/500c1180a96859e5c54a5359f024a397.svg"
+        />
+      </div>
+      <div class="password">
+        <input
+          type="password"
+          placeholder="请输入密码(6到20位字符)"
+          pattern="^[\dA-Za-z_]{6,20}$"
+          required
+        />
+        <img
+          src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/4f6f6f316cde4398d201cd67e44ddea3.svg"
+        />
+      </div>
+      <div class="code">
+        <input
+          type="text"
+          placeholder="请输入邀请码(6位数字)"
+          pattern="^[\d]{6}$"
+          maxlength="6"
+          required
+        />
+        <button type="button">查询</button>
+        <img
+          src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/500c1180a96859e5c54a5359f024a397.svg"
+        />
+      </div>
+      <img
+        src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/ad7fa76844a2df5c03151ead0ce65ea6.svg"
+      />
+      <ul>
+        <li>
+          <input id="male" type="radio" name="sex" />
+          <label for="male">Boy</label>
+        </li>
+        <li>
+          <input id="female" type="radio" name="sex" />
+          <label for="female">Girl</label>
+        </li>
+      </ul>
+      <button type="button">注册</button>
+    </form>
+  </body>
+</html>

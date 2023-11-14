@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      .btn1 {
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      a {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0 20px;
+        border-radius: 10px;
+        height: 40px;
+        background-color: #66f;
+        line-height: 40px;
+        color: #fff;
+
+        & + .hover-tips {
+          margin-top: 10px;
+        }
+        &.btn-1 {
+          &::after {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            border-radius: 5px;
+            width: 80px;
+            height: 40px;
+            content: attr(data-msg);
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            text-align: center;
+            transition: all 300ms;
+            font-size: 10px;
+          }
+          &:hover::after {
+            transform: translate(100px);
+            opacity: 1;
+          }
+        }
+        &.btn2 {
+          display: inline-block;
+        }
+
+        &.btn-2:empty::after {
+          content: attr(href);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="btn1">
+        <a
+          class="hover-tips btn-1"
+          href="https://www.baidu.com"
+          data-msg="Hello World"
+          >提示框</a
+        >
+      </div>
+      <div class="btn2">
+        <a class="hover-tips btn-2" href="https://www.baidu.com"></a>
+      </div>
+    </div>
+  </body>
+</html>

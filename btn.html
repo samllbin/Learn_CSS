@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href=".//scss/btn.css" />
+  </head>
+  <body>
+    <a class="track-btn">
+      <span>妙用CSS变量，让你的CSS变得更心动</span>
+    </a>
+  </body>
+  <script>
+    const btn = document.getElementsByClassName("track-btn")[0];
+    const btnStyle = btn.style;
+    btn.addEventListener("mousemove", (e) => {
+      btnStyle.setProperty("--x", `${e.offsetX}px`);
+      btnStyle.setProperty("--y", `${e.offsetY}px`);
+    });
+  </script>
+</html>

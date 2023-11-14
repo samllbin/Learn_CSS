@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .three-column-layout {
+        display: flex;
+        width: 400px;
+        height: 400px;
+        .left {
+          width: 50px;
+          background-color: blue;
+        }
+        .center {
+          width: 100px;
+          background-color: red;
+        }
+        .right {
+          flex: 1;
+          background-color: greenyellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="three-column-layout">
+      <div class="left"></div>
+      <div class="center"></div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>

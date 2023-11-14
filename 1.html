@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content-box {
+        box-sizing: content-box;
+        margin: 100px;
+        padding: 50px;
+        border: 10px solid #66f;
+        width: 80px;
+        height: 80px;
+        background-color: #f66;
+      }
+      .border-box {
+        box-sizing: border-box;
+        margin: 100px;
+        padding: 50px;
+        border: 10px solid #66f;
+        width: 80px;
+        height: 80px;
+        background-color: #f66;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-box"></div>
+    <div class="border-box"></div>
+  </body>
+</html>
+
+<!-- 在此再补充一些margin折叠的计算问题。
+
+两个盒子相邻边的margin都为正值，取最大值
+两个盒子相邻边的margin都为负值，取最小值，两者会互相重合
+两个盒子相邻边的margin一正一负，取两者相加值，若结果为负，两者会互相重合 -->
