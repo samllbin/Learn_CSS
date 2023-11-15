@@ -1,0 +1,26 @@
+.hollow-text {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: #000 url("https://jowayyoung.github.io/static/img/icss/mountain.jpg") no-repeat center top/auto 300px;
+  background-clip: text;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 80px;
+  font-weight: bold;
+  color: transparent; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: #000
+    url("https://jowayyoung.github.io/static/img/icss/mountain.jpg") no-repeat
+    center top/auto 300px;
+  background-clip: text;
+  text-shadow: 2px 2px 5px rgba(#000, 0.5);
+  font-weight: bold;
+  font-size: 80px;
+  color: transparent;
+}
+
+/*# sourceMappingURL=loukong.css.map */
